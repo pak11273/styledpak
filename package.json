@@ -1,0 +1,15 @@
+{
+  "name": "styledpak",
+  "version": "1.0.0",
+  "description": "a styled-components library",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "styled-components"
+  ],
+  "author": "Isaac Pak",
+  "license": "ISC",
+  "dependencies": {}
+}
