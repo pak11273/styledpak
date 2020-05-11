@@ -4,7 +4,7 @@
   "description": "a styled-components library",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "echo \"No test specified\""
   },
   "keywords": [
     "styled-components"
