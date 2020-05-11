@@ -1,27 +1,22 @@
 // Generated with util/create-component.js
-import React from "react";
-import { render } from "@testing-library/react";
-
-import TrashC from "./TrashC";
-import { TrashCProps } from "./TrashC.types";
+import React from "react"
+import TrashC from "./TrashC"
+import { TrashCProps } from "./TrashC.types"
+import { render } from "@testing-library/react"
 
 describe("Test Component", () => {
-  let props: TrashCProps;
+  let props: TrashCProps
 
   beforeEach(() => {
     props = {
-      foo: "bar"
-    };
-  });
+      foo: "bar",
+    }
+  })
 
-  const renderComponent = () => render(<TrashC {...props} />);
+  const renderComponent = () => render(<TrashC {...props} />)
 
   it("should render foo text correctly", () => {
-    props.foo = "harvey was here";
-    const { getByTestId } = renderComponent();
-
-    const component = getByTestId("TrashC");
-
-    expect(component).toHaveTextContent("harvey was here");
-  });
-});
+    props.foo = "foo"
+    renderComponent()
+  })
+})
