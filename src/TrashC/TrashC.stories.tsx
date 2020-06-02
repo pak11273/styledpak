@@ -1,11 +1,12 @@
 // Generated with util/create-component.js
-import React from "react";
-import TrashC from "./TrashC";
+
+import React from "react"
+import TrashC from "./TrashC"
 
 export default {
-    title: "TrashC"
-};
+  title: "TrashC",
+}
 
-export const WithBar = () => <TrashC foo="bar" />;
+export const WithBar = () => <TrashC foo="far" />
 
-export const WithBaz = () => <TrashC foo="baz" />;
+export const WithBaz = () => <TrashC foo="faz" />
