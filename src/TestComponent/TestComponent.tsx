@@ -7,7 +7,7 @@ const TestComponent: React.FC<TestComponentProps> = ({ theme }) => (
     className={`test-component test-component-${theme}`}
   >
     <h1 className="heading">I'm the test component</h1>
-    <h2>Fool me!</h2>
+    <h2>Not me!</h2>
   </div>
 )
 
