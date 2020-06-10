@@ -1,11 +1,66 @@
+import Grid from "./Grid"
+import { Props } from "../../shared/interfaces"
 // Generated with util/create-component.js
-import React from "react";
-import Grid from "./Grid";
+import React from "react"
+import styled from "styled-components"
 
 export default {
-    title: "Grid"
-};
+  title: "Grid",
+}
 
-export const WithBar = () => <Grid foo="bar" />;
+const Child = styled.div<Props>`
+  grid-area: ${props => props.gridArea || null};
+`
 
-export const WithBaz = () => <Grid foo="baz" />;
+export const WithBasicLayout = () => (
+  <Grid
+    gridTemplateAreas={["navbar navbar", "sidebar body", "footer footer"]}
+    gridTemplateColumns="1fr 2fr"
+  >
+    <Child
+      style={{
+        width: "100%",
+        background: "green",
+        color: "white",
+        padding: "5rem",
+      }}
+      gridArea="sidebar"
+    >
+      sidebar
+    </Child>
+    <Child
+      style={{
+        width: "100%",
+        background: "red",
+        color: "white",
+        padding: "5rem",
+      }}
+      gridArea="navbar"
+    >
+      navbar
+    </Child>
+    <Child
+      style={{
+        width: "100%",
+        background: "papayawhip",
+        color: "black",
+        padding: "5rem",
+        gridArea: "body",
+      }}
+      gridArea="body"
+    >
+      body
+    </Child>
+    <Child
+      style={{
+        width: "100%",
+        background: "blue",
+        color: "white",
+        padding: "5rem",
+      }}
+      gridArea="footer"
+    >
+      footer
+    </Child>
+  </Grid>
+)

@@ -29,4 +29,6 @@ export default {
       insert: true,
     }),
   ],
+  external: ["styled-components"],
+  globals: { "styled-components": "styled" },
 }

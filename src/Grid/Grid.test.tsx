@@ -1,27 +1,45 @@
-// Generated with util/create-component.js
-import React from "react";
-import { render } from "@testing-library/react";
+import "@testing-library/jest-dom"
 
-import Grid from "./Grid";
-import { GridProps } from "./Grid.types";
+import { cleanup, render } from "@testing-library/react"
+
+import Grid from "./Grid"
+import { GridProps } from "./Grid.types"
+// Generated with util/create-component.js
+import React from "react"
+import ReactDOM from "react-dom"
+import renderer from "react-test-renderer"
 
 describe("Test Component", () => {
-  let props: GridProps;
+  let props: GridProps
 
   beforeEach(() => {
     props = {
-      foo: "bar"
-    };
-  });
+      foo: "bar",
+    }
+  })
 
-  const renderComponent = () => render(<Grid {...props} />);
+  afterEach(cleanup)
 
-  it("should render foo text correctly", () => {
-    props.foo = "foo";
-    const { getByTestId } = renderComponent();
+  const renderComponent = () => render(<Grid {...props} />)
 
-    const component = getByTestId("Grid");
+  it("matches snapshot", () => {
+    const tree = renderer.create(<Grid />).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 
-    expect(component).toHaveTextContent("foo");
-  });
-});
+  // Check props
+  it("should have a black background if given a background props of black", () => {
+    const tree = renderer.create(<Grid />).toJSON()
+  })
+
+  // nest a component and the label of that component should
+  it("renders a child component with the correct areas", () => {
+    const grid = renderer.create(
+      <Grid>
+        <div style={{ gridArea: "navbar" }}>navbar</div>
+      </Grid>
+    )
+  })
+
+  // the grid should be responsive
+})

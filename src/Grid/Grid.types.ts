@@ -1,4 +1,5 @@
 // Generated with util/create-component.js
 export interface GridProps {
-    foo: string;
+  //   foo: string
+  gridTemplateAreas?: array
 }
