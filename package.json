@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "a styled-components library",
   "main": "build/index.js",
+  "types": "build/index.d.ts",
   "module": "build/index.es.js",
   "files": [
     "build"
