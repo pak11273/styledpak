@@ -6,4 +6,7 @@ export interface FlexProps
   > {
   flexDirection?: string
   justifyContent?: string
+  alignItems?: string
+  height?: string
+  width?: string
 }
