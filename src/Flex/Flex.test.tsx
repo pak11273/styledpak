@@ -8,10 +8,5 @@ describe("Test Component", () => {
   let props: FlexProps
 
   const renderComponent = () => render(<Flex />)
-
-  it("should render foo text correctly", () => {
-    const { getByTestId } = renderComponent()
-
-    const component = getByTestId("Flex")
-  })
+  it("should do something here", () => {})
 })

@@ -8,10 +8,5 @@ describe("Test Component", () => {
   let props: InputProps
 
   const renderComponent = () => render(<Input {...props} />)
-
-  it("should render foo text correctly", () => {
-    const { getByTestId } = renderComponent()
-
-    const component = getByTestId("Input")
-  })
+  it("should do something here", () => {})
 })

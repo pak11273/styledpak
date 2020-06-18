@@ -8,9 +8,5 @@ describe("Test Component", () => {
   let props: LabelProps
 
   const renderComponent = () => render(<Label {...props} />)
-
-  it("should render foo text correctly", () => {
-    const { getByTestId } = renderComponent()
-    const component = getByTestId("Label")
-  })
+  it("should do something here", () => {})
 })

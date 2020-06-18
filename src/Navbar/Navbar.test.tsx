@@ -8,12 +8,5 @@ describe("Test Component", () => {
   let props: NavbarProps
 
   const renderComponent = props => render(<Navbar {...props} />)
-
-  it("should render text correctly", () => {
-    const { getByTestId } = renderComponent(props)
-
-    const component = getByTestId("Navbar")
-
-    // expect(component).toHaveTextContent("foo");
-  })
+  it("should do something here", () => {})
 })

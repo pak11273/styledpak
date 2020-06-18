@@ -9,11 +9,5 @@ describe("Test Component", () => {
 
   const renderComponent = () => render(<Menu {...props} />)
 
-  it("should render text correctly", () => {
-    const { getByTestId } = renderComponent()
-
-    const component = getByTestId("Menu")
-
-    // expect(component).toHaveTextContent("foo");
-  })
+  it("should do something here", () => {})
 })
