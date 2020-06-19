@@ -11,6 +11,8 @@ const Style = styled.div`
   ${color}
 `
 
-const Box: React.FC<BoxProps> = ({ children }) => <Style>{children}</Style>
+const Box: React.FC<BoxProps> = props => (
+  <Style {...props}>{props.children}</Style>
+)
 
 export default Box

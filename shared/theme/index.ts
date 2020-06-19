@@ -1,20 +1,17 @@
+import { colors } from "./colors"
+import { space } from "./space"
+
+export const breakpoints: string[] = ["319px", "424px", "767px", "1023px"]
+
 export default {
   name: "main",
   colors: {
-    primary: "blue",
-    secondary: "red",
-    tertiary: "orange",
-    success: "green",
-    danger: "red",
-    warning: "orange",
-    info: "blue",
-    light: "white",
-    dark: "dark",
-    white: "white",
-    text: "black",
+    ...colors,
   },
-  breakpoints: [32, 48, 64],
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  breakpoints,
+  space: {
+    ...space,
+  },
   fontSizes: [12, 14, 16, 20, 24, 36, 48, 80, 96],
   fontWeights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
   lineHeights: {

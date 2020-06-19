@@ -1,3 +1,6 @@
 export interface BoxProps {
-    foo: string;
+  bg: string
+  color: string
+  fontSize: number
+  p: number
 }

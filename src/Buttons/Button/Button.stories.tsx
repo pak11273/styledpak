@@ -10,7 +10,6 @@ import Button from "./Button"
 import React from "react"
 import { storiesOf } from "@storybook/react"
 import theme from "../../../shared/theme"
-import { withInfo } from "@storybook/addon-info"
 
 storiesOf("Button", module)
   .addDecorator(withKnobs)
