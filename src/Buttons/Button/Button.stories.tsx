@@ -1,5 +1,6 @@
 import {
   boolean,
+  color,
   object,
   select,
   text,
@@ -12,8 +13,7 @@ import { storiesOf } from "@storybook/react"
 import theme from "../../../shared/theme"
 
 storiesOf("Button", module)
-  .addDecorator(withKnobs)
-
+  // .addDecorator(withKnobs)
   .add("no props", props => (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Button>No Props</Button>
@@ -21,7 +21,7 @@ storiesOf("Button", module)
   ))
   .add("with theme primary color", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <Button background={theme.colors.primary} color={theme.colors.white}>
+      <Button background={theme.colors.primary} color={theme.colors.primary}>
         Primary
       </Button>
     </div>
@@ -30,7 +30,7 @@ storiesOf("Button", module)
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Button
         border={text("border", "1px solid black")}
-        color={text("color", "none")}
+        color={color("color", "none", "color")}
         focus={text("focus", "red")}
         padding={text("padding", "6px 16px")}
         margin={text("margin", "0px")}

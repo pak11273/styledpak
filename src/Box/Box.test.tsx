@@ -6,12 +6,6 @@ import { render } from "@testing-library/react"
 describe("Test Component", () => {
   let props: BoxProps
 
-  beforeEach(() => {
-    props = {
-      foo: "bar",
-    }
-  })
-
   const renderComponent = () => render(<Box {...props} />)
 
   it("should render a box", () => {

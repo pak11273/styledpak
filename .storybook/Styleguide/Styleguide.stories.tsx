@@ -1,6 +1,8 @@
 import React from "react"
+import { jsxDecorator } from "storybook-addon-jsx"
 import { storiesOf } from "@storybook/react"
 import styled from "styled-components"
+import { withInfo } from "@storybook/addon-info"
 
 // import { Typography } from "../../shared/theme/typography"
 // import { breakpoints } from "../../shared/theme"
@@ -26,6 +28,7 @@ export default {
 
 storiesOf("Styleguide ", module)
   .addParameters({ viewport: { defaultViewport: "default" } })
+  // .addDecorator(jsxDecorator)
   .add("default", () => <h1>Typography</h1>)
 /* 
     // <Container>
