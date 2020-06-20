@@ -13,15 +13,14 @@ import { storiesOf } from "@storybook/react"
 import theme from "../../../shared/theme"
 
 storiesOf("Button", module)
-  // .addDecorator(withKnobs)
-  .add("no props", props => (
+  .add("no props", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Button>No Props</Button>
     </div>
   ))
   .add("with theme primary color", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <Button background={theme.colors.primary} color={theme.colors.primary}>
+      <Button bg={theme.colors.primary} color={theme.colors.primary}>
         Primary
       </Button>
     </div>

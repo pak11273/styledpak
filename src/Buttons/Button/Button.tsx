@@ -4,7 +4,7 @@ import { ButtonProps } from "./Button.types"
 import styled from "styled-components"
 
 const Style = styled.button<ButtonProps>`
-  background: ${props => props.background || "white"};
+  background: ${props => props.bg || "white"};
   border: ${props =>
     props.color
       ? `1px solid ${props.color}`

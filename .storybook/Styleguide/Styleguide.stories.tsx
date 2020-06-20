@@ -28,7 +28,6 @@ export default {
 
 storiesOf("Styleguide ", module)
   .addParameters({ viewport: { defaultViewport: "default" } })
-  // .addDecorator(jsxDecorator)
   .add("default", () => <h1>Typography</h1>)
 /* 
     // <Container>

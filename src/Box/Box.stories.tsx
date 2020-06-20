@@ -10,7 +10,7 @@ export default {
 
 export const Base = () => (
   <div style={{ display: "flex", justifyContent: "center" }}>
-    <Box fontSize={96} p={3} bg="light-red" color="orange">
+    <Box fontSize={6} p={3} bg="red.10" color="orange">
       This is a box
     </Box>
   </div>

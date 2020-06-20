@@ -1,22 +1,31 @@
-import JSXAddon, { jsxDecorator } from "storybook-addon-jsx"
-import { addDecorator, configure, setAddon } from "@storybook/react"
+import { addDecorator, configure } from "@storybook/react"
+import { setDefaults, withInfo } from "@storybook/addon-info"
 
-import themeDecorator from "./themeDecorator"
-import { withInfo } from "@storybook/addon-info"
+import React from "react"
+import { ThemeProvider } from "styled-components"
+import { jsxDecorator } from "storybook-addon-jsx"
+import theme from "../shared/theme"
 import { withKnobs } from "@storybook/addon-knobs"
 
-// setAddon(JSXAddon)
+const themeDecorator = storyFn => (
+  <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>
+)
 
 const req = require.context("../src", true, /.stories.js$/)
 
-addDecorator(jsxDecorator) //
+addDecorator(themeDecorator)
+addDecorator(jsxDecorator) // this must come before loadStories!!
+
+addDecorator(withInfo)
+addDecorator(withKnobs)
+setDefaults({
+  inline: true,
+  source: false,
+})
+
 function loadStories() {
   require("./Styleguide/Styleguide.stories")
   req.keys().forEach(file => req(file))
 }
 
 configure(loadStories, module)
-
-addDecorator(themeDecorator)
-addDecorator(withInfo)
-addDecorator(withKnobs)
