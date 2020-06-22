@@ -1,4 +1,4 @@
-import { color, withKnobs } from "@storybook/addon-knobs"
+import { boolean, color, object, select, text } from "@storybook/addon-knobs"
 
 import Box from "./Box"
 import React from "react"
@@ -8,12 +8,10 @@ export default {
   title: "Box",
 }
 
-export const Base = () => (
+storiesOf("Box", module).add("base", () => (
   <div style={{ display: "flex", justifyContent: "center" }}>
-    <Box fontSize={6} p={3} bg="red.10" color="orange">
+    <Box fontSize={6} p={3} bg="primary" color={text("color", "orange")}>
       This is a box
     </Box>
   </div>
-)
-
-storiesOf("Box", module).addDecorator(withKnobs)
+))

@@ -1,16 +1,8 @@
-import {
-  boolean,
-  color,
-  object,
-  select,
-  text,
-  withKnobs,
-} from "@storybook/addon-knobs"
+import { boolean, color, object, select, text } from "@storybook/addon-knobs"
 
 import Button from "./Button"
 import React from "react"
 import { storiesOf } from "@storybook/react"
-import theme from "../../../shared/theme"
 
 storiesOf("Button", module)
   .add("no props", () => (
@@ -18,9 +10,9 @@ storiesOf("Button", module)
       <Button>No Props</Button>
     </div>
   ))
-  .add("with theme primary color", () => (
+  .add("with theme primary bg", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <Button bg={theme.colors.primary} color={theme.colors.primary}>
+      <Button bg="red" color="primary">
         Primary
       </Button>
     </div>
