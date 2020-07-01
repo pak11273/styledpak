@@ -7,6 +7,6 @@ import { render } from "@testing-library/react"
 describe("Test Component", () => {
   let props: NavbarProps
 
-  const renderComponent = props => render(<Navbar {...props} />)
+  const renderComponent = (props: any) => render(<Navbar {...props} />)
   it("should do something here", () => {})
 })

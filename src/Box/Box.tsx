@@ -1,18 +1,14 @@
-import { color, fontSize, space, width } from "styled-system"
+import { color, fontSize, layout, space, width } from "styled-system"
 
 import { BoxProps } from "./Box.types"
 import React from "react"
 import styled from "styled-components"
 
-const Style = styled.div`
-  ${space}
-  ${width}
+const Box = styled.div`
+  background: ${({ theme }) => theme.colors.primary};
+  /* ${color}
   ${fontSize}
-  ${color}
+  ${space}
+  ${width} */
 `
-
-const Box: React.FC<BoxProps> = props => (
-  <Style {...props}>{props.children}</Style>
-)
-
 export default Box

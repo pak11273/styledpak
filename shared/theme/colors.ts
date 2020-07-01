@@ -1,19 +1,21 @@
 import * as CSS from "csstype"
 
-// export interface ThemeColors {
-//   primary: CSS.ColorProperty
-//   link: CSS.ColorProperty
-//   success: CSS.ColorProperty
-//   warning: CSS.ColorProperty
-//   error: CSS.ColorProperty
-//   heading: CSS.ColorProperty
-//   text: CSS.ColorProperty
-//   disabled: CSS.ColorProperty
-//   border: CSS.ColorProperty
-//   black: string
-// }
+export interface ThemeColors {
+  primary: CSS.ColorProperty
+  link: CSS.ColorProperty
+  success: CSS.ColorProperty
+  warning: CSS.ColorProperty
+  error: CSS.ColorProperty
+  heading: CSS.ColorProperty
+  text: CSS.ColorProperty
+  disabled: CSS.ColorProperty
+  border: CSS.ColorProperty
+  black: string
+  blacks: CSS.ColorProperty[]
+  whites: CSS.ColorProperty[]
+}
 
-export = {
+export const colors: ThemeColors = {
   primary: "#423EA2",
   link: "#1890ff",
   success: "#52c41a",
@@ -24,17 +26,17 @@ export = {
   disabled: "#f5222d",
   border: "#423EA2",
   black: "#000",
-  "near-black": "#111",
-  "dark-gray": "#333",
-  "mid-gray": "#555",
-  gray: " #777",
-  silver: "#999",
-  "light-silver": "#aaa",
-  "moon-gray": "#ccc",
-  "light-gray": "#eee",
-  "near-white": "#f4f4f4",
-  white: "#fff",
-  transparent: "transparent",
+  // "near-black": "#111",
+  // "dark-gray": "#333",
+  // "mid-gray": "#555",
+  // gray: " #777",
+  // silver: "#999",
+  // "light-silver": "#aaa",
+  // "moon-gray": "#ccc",
+  // "light-gray": "#eee",
+  // "near-white": "#f4f4f4",
+  // white: "#fff",
+  // transparent: "transparent",
   blacks: [
     "rgba(0,0,0,.0125)",
     "rgba(0,0,0,.025)",

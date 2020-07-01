@@ -3,15 +3,19 @@ import { setDefaults, withInfo } from "@storybook/addon-info"
 
 import { GlobalStyle } from "./globalStyle"
 import React from "react"
+import { Router } from "react-router-dom"
 import { ThemeProvider } from "styled-components"
+import { createBrowserHistory } from "history"
 import { jsxDecorator } from "storybook-addon-jsx"
 import { theme } from "../shared/theme"
 import { withKnobs } from "@storybook/addon-knobs"
 
+const history = createBrowserHistory()
+
 addDecorator(storyFn => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
-    {storyFn()}
+    <Router history={history}>{storyFn()}</Router>
   </ThemeProvider>
 ))
 
@@ -24,7 +28,7 @@ setDefaults({
   source: false,
 })
 
-const req = require.context("../src", true, /.stories.js$/)
+const req = require.context("../src", true, /.stories.tsx$/)
 
 function loadStories() {
   require("./Styleguide/Styleguide.stories")

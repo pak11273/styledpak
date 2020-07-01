@@ -23,3 +23,7 @@ https://medium.com/storybookjs/declarative-storybook-configuration-49912f77b78
 ## Styled-System Structure
 
 - ref: https://varun.ca/styled-system/
+
+## Styled-System and Theme setup with typescript
+
+- ref: https://dev.to/jdcas89/start-your-app-the-right-way-featuring-react-styled-system-styled-components-and-typescript-7a4
