@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
     "declaration": true,
     "outDir": "build/cjs",
     "noImplicitAny": true,
@@ -13,7 +14,8 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "strict": false
   },
   "include": ["src"],
   "exclude": ["node_modules", "build", "src/**/*.stories.tsx"]

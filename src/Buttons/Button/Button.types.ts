@@ -42,6 +42,7 @@ export interface ButtonProps {
   theme?: object
   lowercase?: boolean
   info?: boolean
+  open?: string
   /**
    * @default 3px
    */

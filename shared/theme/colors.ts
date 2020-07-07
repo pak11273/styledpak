@@ -12,7 +12,20 @@ export interface ThemeColors {
   border: CSS.ColorProperty
   black: string
   blacks: CSS.ColorProperty[]
+  blue: CSS.ColorProperty
+  navy: CSS.ColorProperty
+  "near-black": CSS.ColorProperty
+  white: CSS.ColorProperty
   whites: CSS.ColorProperty[]
+  "dark-gray": CSS.ColorProperty
+  "mid-gray": CSS.ColorProperty
+  gray: CSS.ColorProperty
+  silver: CSS.ColorProperty
+  "light-silver": CSS.ColorProperty
+  "moon-gray": CSS.ColorProperty
+  "light-gray": CSS.ColorProperty
+  "near-white": CSS.ColorProperty
+  transparent: CSS.ColorProperty
 }
 
 export const colors: ThemeColors = {
@@ -25,18 +38,20 @@ export const colors: ThemeColors = {
   text: "#000",
   disabled: "#f5222d",
   border: "#423EA2",
-  black: "#000",
-  // "near-black": "#111",
-  // "dark-gray": "#333",
-  // "mid-gray": "#555",
-  // gray: " #777",
-  // silver: "#999",
-  // "light-silver": "#aaa",
-  // "moon-gray": "#ccc",
-  // "light-gray": "#eee",
-  // "near-white": "#f4f4f4",
-  // white: "#fff",
-  // transparent: "transparent",
+  black: "#000e1a",
+  white: "#fff",
+  blue: "#007ce0",
+  navy: "#004175",
+  "near-black": "#111",
+  "dark-gray": "#333",
+  "mid-gray": "#555",
+  gray: " #777",
+  silver: "#999",
+  "light-silver": "#aaa",
+  "moon-gray": "#ccc",
+  "light-gray": "#eee",
+  "near-white": "#f4f4f4",
+  transparent: "transparent",
   blacks: [
     "rgba(0,0,0,.0125)",
     "rgba(0,0,0,.025)",

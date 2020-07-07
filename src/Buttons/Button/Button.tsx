@@ -28,11 +28,13 @@ const Style = styled.button<ButtonProps>`
 `
 
 const Button: React.FC<ButtonProps> = props => {
-  const btn = useRef(null)
+  // const btn = useRef(null)
   const onClick = () => {
-    btn.current.blur()
+    // btn.current.blur()
+    console.log("button")
   }
-  return <Style {...props} onClick={onClick} ref={btn} />
+  // return <Style {...props} onClick={onClick} ref={btn} />
+  return <Style {...props} onClick={onClick} />
 }
 
 export default Button

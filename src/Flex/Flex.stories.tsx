@@ -1,6 +1,7 @@
 import Flex from "./Flex"
 // Generated with util/create-component.js
 import React from "react"
+import { flexbox } from "styled-system"
 
 export default {
   title: "Flex",

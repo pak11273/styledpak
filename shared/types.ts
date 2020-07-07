@@ -4,6 +4,7 @@ import {
   ColorProps,
   FlexboxProps,
   FontSizeProps,
+  GridProps,
   HeightProps,
   LayoutProps,
   LineHeightProps,
@@ -18,11 +19,12 @@ import {
   WidthProps,
 } from "styled-system"
 
-export type BoxProps = AlignSelfProps &
+export type SystemProps = AlignSelfProps &
   BorderRadiusProps &
   ColorProps &
   FlexboxProps &
   FontSizeProps &
+  GridProps &
   HeightProps &
   LayoutProps &
   LineHeightProps &
@@ -33,4 +35,5 @@ export type BoxProps = AlignSelfProps &
   OrderProps &
   OverflowProps &
   SpaceProps &
+  TypographyProps &
   WidthProps

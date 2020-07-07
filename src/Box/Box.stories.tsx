@@ -24,13 +24,11 @@ storiesOf("Box", module)
   .add("with props", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Box
-      // lineHeight="copy"
-      // m={number("m", 0)}
-      // p={3}
-      // bg="link"
-      // color={text("color", "orange")}
-      // space={12}
-      // width={200}
+        fontSize={[100, 1, 1, 100]}
+        p={text("p", "XXL")}
+        m={30}
+        bg={text("bg", "tomato")}
+        color={text("color", "orange")}
       >
         Box with props
       </Box>
