@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "src",
     "declaration": true,
-    "outDir": "build/cjs",
+    "outDir": "build/esm",
     "noImplicitAny": true,
     "module": "CommonJS",
     "target": "es5",
