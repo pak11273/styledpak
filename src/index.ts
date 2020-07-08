@@ -6,6 +6,7 @@ import Flex from "./Flex/Flex"
 import Grid from "./Grid/Grid"
 import Input from "./Input/Input"
 import Label from "./Label/Label"
+import Nav from "./Nav/Nav"
 import Navbar from "./Navbar/Navbar"
 import Span from "./Span/Span"
 import TestComponent from "./TestComponent/TestComponent"
@@ -24,6 +25,7 @@ export {
   Flex,
   Label,
   // Link,
+  Nav,
   Grid,
   Input,
   Navbar,

@@ -1,18 +1,24 @@
+import { Box } from "../index"
 import Flex from "./Flex"
-// Generated with util/create-component.js
 import React from "react"
-import { flexbox } from "styled-system"
+import { storiesOf } from "@storybook/react"
 
 export default {
   title: "Flex",
 }
 
-export const Base = () => (
-  <div style={{ height: "600px" }}>
-    <Flex>
-      <div style={{ background: "red" }}>item 1</div>
-      <div style={{ background: "white" }}>item 2</div>
-      <div style={{ background: "blue" }}>item 3</div>
-    </Flex>
-  </div>
-)
+storiesOf("Flex", module)
+  .add("base", () => (
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <Flex> Base FlexBox</Flex>
+    </div>
+  ))
+  .add("with props", () => (
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <Flex>
+        <Box {...{ bg: "red" }}>item 1</Box>
+        <Box {...{ bg: "green" }}>item 2</Box>
+        <Box {...{ bg: "blue" }}>item 3</Box>
+      </Flex>
+    </div>
+  ))

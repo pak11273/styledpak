@@ -14,17 +14,12 @@ export const WithBasicLayout = () => (
     gridTemplateAreas="'navbar navbar' 'sidebar main' 'footer footer'"
     gridTemplateColumns="1fr 2fr"
   >
-    <Navbar gridArea="navbar" display={["none", "flex"]}>
-      A navbar
-    </Navbar>
-    <Navbar gridArea="navbar" display={["flex", "none"]}>
-      A foobar
-    </Navbar>
+    {/* <Navbar {...{ gridArea: "navbar", display: { _: "none", sm: "flex" } }} />
     <Box gridArea="footer" bg="tomato">
       A footer
     </Box>
     <Box gridArea="sidebar">A sidebar</Box>
-    <Box gridArea="main">A main</Box>
+    <Box gridArea="main">A main</Box> */}
   </Grid>
 )
 

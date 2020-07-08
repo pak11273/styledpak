@@ -7,6 +7,9 @@ const Grid = styled.div<SystemProps>`
   display: grid;
   ${grid}
 `
+
+// Grid using array for props
+
 // grid-template-areas: ${props =>
 //   props.gridTemplateAreas
 //     ? props.gridTemplateAreas.reduce(

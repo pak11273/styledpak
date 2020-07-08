@@ -12,6 +12,7 @@ import {
   TextStyleProps,
   borderRadius,
   color,
+  flexbox,
   fontFamily,
   fontSize,
   fontStyle,
@@ -24,9 +25,12 @@ import {
   textStyle,
 } from "styled-system"
 
-// import { DivProps } from "./Div.types";
 import React from "react"
 import styled from "styled-components"
+
+// import { DivProps } from "./Div.types";
+
+
 
 export type StyledSystemProps =
   | SpaceProps
@@ -49,6 +53,7 @@ export type StyledSystemProps =
 
 export default styled.div`
   ${space}
+  ${flexbox}
   ${fontSize}
   ${fontStyle}
   ${size}

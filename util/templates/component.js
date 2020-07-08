@@ -3,8 +3,8 @@ module.exports = componentName => ({
 
 import { ${componentName}Props } from "./${componentName}.types";
 
-const ${componentName}: React.FC<${componentName}Props> = ({ foo }) => (
-    <div>{foo}</div>
+const ${componentName}: React.FC<${componentName}Props> = () => (
+    <div>pending</div>
 );
 
 export default ${componentName};
