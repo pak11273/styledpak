@@ -31,3 +31,10 @@ https://medium.com/storybookjs/declarative-storybook-configuration-49912f77b78
 ## Styled-System production components
 
 - ref: https://quipper.github.io/2020/04/06/styled-system-in-practice.html
+
+## yalc
+
+1. styledpak => yalc publish
+2. project => yalc add styledpak
+3. styledpak => yalc publish
+4. project => yalc update styledpak

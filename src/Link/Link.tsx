@@ -1,44 +1,49 @@
-// import { Link as DomLink, LinkProps } from "react-router-dom"
-// import { color, grid, layout, space } from "styled-system"
+import { LinkProps, Link as RouterLink } from "react-router-dom"
+import { color, layout, space, typography } from "styled-system"
 
-// import React from "react"
-// import { SystemProps } from "../../shared/types"
-// import styled from "styled-components"
+import { Div } from "../index"
+import React from "react"
+import { SystemProps } from "../../shared/types"
+import styled from "styled-components"
 
-// // const Link: React.FC<LinkProps> = () => <div>Link</div>
+type AnchorProps = any &
+  SystemProps &
+  Pick<LinkProps, "to"> & {
+    onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void
+  }
 
-// type AnchorProps = SystemProps &
-//   Pick<LinkProps, "to"> & {
-//     onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void
-//   }
+const Style = styled(RouterLink)<any>`
+  text-decoration: none;
+  background: blue;
+  padding: 0rem;
+  ${color}
+  ${typography}
+  ${layout}
+  ${space}
+`
 
-// const Style = styled(DomLink)<LinkProps & AnchorProps>`
-//   background-color: blue;
-//   text-decoration: none;
-
-//   ${color}
-//   ${grid}
-//   ${layout}
-//   ${space}
-// `
-// /* &.${props => props.activeClassName} {
-//     background-color: paleturquoise;
-//   } */
+export const Link: React.FC<AnchorProps> = ({
+  to,
+  onClick,
+  children,
+  ...props
+}) => {
+  return (
+    <Style to={to} onClick={onClick} {...props}>
+      {children}
+    </Style>
+  )
+}
 
 // export const Link: React.FC<AnchorProps> = ({
 //   to,
 //   onClick,
 //   children,
 //   ...props
-// }) => (
-//   <Style to={to} onClick={onClick}>
-//     {children}
-//   </Style>
-// )
-
-import { Link as RouterLink } from "react-router-dom"
-import styled from "styled-components"
-
-export const Link = styled(RouterLink)`
-  background-color: blue;
-`
+// }) => {
+//   return (
+//     <RouterLink to={to} onClick={onClick}>
+//       <Div>{children}</Div>
+//     </RouterLink>
+//   )
+// }
