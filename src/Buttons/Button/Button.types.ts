@@ -24,7 +24,11 @@ export interface ButtonProps {
   /**
    * @default none
    */
-  focus?: string
+  focusColor?: string
+  /**
+   * @default () => {alert("hi")}
+   */
+  onClick?: () => void
   /**
    * @default "6px 16px"
    */

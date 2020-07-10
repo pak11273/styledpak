@@ -1,10 +1,10 @@
-import React, { ReactElement, useRef } from "react"
+import React, { ReactElement, useEffect, useRef } from "react"
 
 import { ButtonProps } from "./Button.types"
 import styled from "styled-components"
 
 const Style = styled.button<ButtonProps>`
-  background: ${props => props.bg || "white"};
+  background: ${props => props.bg || props.theme.colors.pak.default};
   border: ${props =>
     props.color
       ? `1px solid ${props.color}`
@@ -15,7 +15,7 @@ const Style = styled.button<ButtonProps>`
   color: ${props => props.color};
   cursor: ${props => props.cursor || "pointer"};
   &:focus {
-    background: ${props => props.focus || "none"};
+    background: ${props => props.focusColor || "none"};
   }
   margin: ${props => props.margin || "0"};
   outline: none;
@@ -28,13 +28,16 @@ const Style = styled.button<ButtonProps>`
 `
 
 const Button: React.FC<ButtonProps> = props => {
-  // const btn = useRef(null)
-  const onClick = () => {
-    // btn.current.blur()
-    console.log("button")
+  const btn = useRef(null)
+  // TODO: when not focused change bg back to default
+  const handleFocusOut = (e: MouseEvent) => {
+    console.log("btn: ", btn)
   }
-  // return <Style {...props} onClick={onClick} ref={btn} />
-  return <Style {...props} onClick={onClick} />
+  useEffect(() => {
+    addEventListener("mouseleave", handleFocusOut)
+    return removeEventListener("mouseleave", () => {})
+  })
+  return <Style {...props} onClick={props.onClick} ref={btn} />
 }
 
 export default Button

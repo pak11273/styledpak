@@ -1,5 +1,4 @@
-import { Flex, Link } from "../index"
-
+import { Link } from "../index"
 import Navbar from "./Navbar"
 // Generated with util/create-component.js
 import React from "react"

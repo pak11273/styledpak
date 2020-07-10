@@ -1,3 +1,5 @@
+import * as CSS from "csstype"
+
 import { Theme } from "styled-system"
 import { colors } from "./colors"
 import { space } from "./space"
@@ -20,6 +22,9 @@ export const theme: Theme = {
   // name: "main",
   colors: {
     ...colors,
+    pak: {
+      ...colors.pak.bg,
+    },
   },
   breakpoints,
   space: {

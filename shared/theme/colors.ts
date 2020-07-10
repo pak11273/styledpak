@@ -1,5 +1,9 @@
 import * as CSS from "csstype"
 
+interface Ibg {
+  default: CSS.ColorProperty
+}
+
 export interface ThemeColors {
   primary: CSS.ColorProperty
   link: CSS.ColorProperty
@@ -15,6 +19,12 @@ export interface ThemeColors {
   blue: CSS.ColorProperty
   navy: CSS.ColorProperty
   "near-black": CSS.ColorProperty
+  pak: {
+    test?: CSS.ColorProperty
+    bg?: {
+      default: CSS.ColorProperty
+    }
+  }
   white: CSS.ColorProperty
   whites: CSS.ColorProperty[]
   "dark-gray": CSS.ColorProperty
@@ -29,6 +39,12 @@ export interface ThemeColors {
 }
 
 export const colors: ThemeColors = {
+  pak: {
+    test: "tomato",
+    bg: {
+      default: "tomato",
+    },
+  },
   primary: "#423EA2",
   link: "#1890ff",
   success: "#52c41a",
