@@ -1,4 +1,4 @@
-import { Box, Flex } from "../index"
+import { Flex, Link } from "../index"
 
 import Navbar from "./Navbar"
 // Generated with util/create-component.js
@@ -17,11 +17,11 @@ storiesOf("Navbar", module)
   ))
   .add("with props", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <Flex>
-        <Box {...{ bg: "red" }}>Logo Button</Box>
-        <Box {...{ bg: "red" }}>item 1</Box>
-        <Box {...{ bg: "green" }}>item 2</Box>
-        <Box {...{ bg: "blue" }}>item 3</Box>
-      </Flex>
+      <Navbar>
+        <Link {...{ bg: "red" }}>Logo Button</Link>
+        <Link {...{ bg: "red" }}>item 1</Link>
+        <Link {...{ bg: "green" }}>item 2</Link>
+        <Link {...{ bg: "blue" }}>item 3</Link>
+      </Navbar>
     </div>
   ))

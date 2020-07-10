@@ -4,6 +4,7 @@ import Button from "./Buttons/Button/Button"
 import Div from "./Div/Div"
 import Flex from "./Flex/Flex"
 import Grid from "./Grid/Grid"
+import Icon from "./Icon/Icon"
 import Input from "./Input/Input"
 import Label from "./Label/Label"
 import Nav from "./Nav/Nav"
@@ -27,6 +28,7 @@ export {
   // Link,
   Nav,
   Grid,
+  Icon,
   Input,
   Navbar,
   Span,
