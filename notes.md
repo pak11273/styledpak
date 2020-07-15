@@ -34,7 +34,7 @@ https://medium.com/storybookjs/declarative-storybook-configuration-49912f77b78
 
 ## yalc
 
-1. styledpak => yalc publish
-2. project => yalc add styledpak
-3. styledpak => yalc publish
-4. project => yalc update styledpak
+1. styled => yalc publish
+2. project => yalc add styled
+3. styled => yalc publish
+4. project => yalc update styled

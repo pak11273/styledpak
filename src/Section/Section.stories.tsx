@@ -1,20 +1,19 @@
 import React from "react"
-import Span from "./Span"
-import { number } from "@storybook/addon-knobs"
+import Section from "./Section"
 import { storiesOf } from "@storybook/react"
 
 export default {
-  title: "Span",
+  title: "Section",
 }
 
-storiesOf("Span", module)
+storiesOf("Section", module)
   .add("base", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <Span>Base Span</Span>
+      <Section gridArea="fifo">base section</Section>
     </div>
   ))
   .add("with props", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <Span fontSize={number("number", 80)}>Base Span</Span>
+      <Section gridArea="lifo">Section with props</Section>
     </div>
   ))

@@ -4,17 +4,17 @@ import Button from "./Button"
 import React from "react"
 import { storiesOf } from "@storybook/react"
 
-const onClick = () => alert("this is a button")
+const onClick = () => console.log("this is a button")
 
 storiesOf("Button", module)
   .add("no props", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <Button>No Props</Button>
+      <Button to="#">No Props</Button>
     </div>
   ))
   .add("with theme primary bg", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <Button bg="red" color="primary">
+      <Button to="#" bg="red" color="primary">
         Primary
       </Button>
     </div>
@@ -22,6 +22,7 @@ storiesOf("Button", module)
   .add("with icon", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Button
+        to="#"
         focusColor={text("focusColor", "red")}
         padding={text("padding", "6px 16px")}
         margin={text("margin", "0px")}
@@ -57,10 +58,14 @@ storiesOf("Button", module)
         border={text("border", "1px solid black")}
         color={color("color", "white", "color")}
         focusColor={text("focusColor", "red")}
+        activeColor={text("activeColor", "green")}
+        disabledColor={text("disabledColor", "black")}
+        hoverColor={text("hoverColor", "red")}
         padding={text("padding", "6px 16px")}
         margin={text("margin", "0px")}
         shadow={boolean("shadow", true)}
         case={text("case", "none")}
+        disabled={boolean("disabled", false)}
         onClick={onClick}
       >
         <div>Primary</div>

@@ -1,12 +1,21 @@
+import { color, flexbox, grid, layout, space } from "styled-system"
+
 import { Div } from "../index"
+import React from "react"
 import { SystemProps } from "../../shared/types"
-import { flexbox } from "styled-system"
 import styled from "styled-components"
 
-/* const Flex = styled.div<SystemProps>` */
-const Flex = styled(Div)`
-  display: flex;
-  /* ${flexbox} */
-`
+const Style = styled(Div)<SystemProps>(
+  { display: "flex", width: "100%" },
+  grid,
+  flexbox,
+  color,
+  layout,
+  space
+)
+
+export const Flex: React.FC<any | SystemProps> = ({ children, ...props }) => (
+  <Style {...props}>{children}</Style>
+)
 
 export default Flex

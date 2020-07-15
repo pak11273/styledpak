@@ -1,4 +1,4 @@
-import { Box, Navbar } from "../index"
+import { Box, Flex, Link, Navbar } from "../index"
 
 import Grid from "./Grid"
 import { Props } from "../../shared/interfaces"
@@ -14,48 +14,15 @@ export const WithBasicLayout = () => (
     gridTemplateAreas="'navbar navbar' 'sidebar main' 'footer footer'"
     gridTemplateColumns="1fr 2fr"
   >
-    {/* <Navbar {...{ gridArea: "navbar", display: { _: "none", sm: "flex" } }} />
-    <Box gridArea="footer" bg="tomato">
+    <Navbar {...{ gridArea: "navbar", display: { _: "none", sm: "flex" } }}>
+      <Link to="#">link</Link>
+      <Link to="#">link</Link>
+      <Link to="#">link</Link>
+    </Navbar>
+    <Flex gridArea="footer" bg="tomato">
       A footer
-    </Box>
-    <Box gridArea="sidebar">A sidebar</Box>
-    <Box gridArea="main">A main</Box> */}
+    </Flex>
+    <Flex gridArea="sidebar">A sidebar</Flex>
+    <Flex gridArea="main">A main</Flex>
   </Grid>
 )
-
-//   <Child
-//     style={{
-//       width: "100%",
-//       background: "green",
-//       color: "white",
-//       padding: "5rem",
-//     }}
-//     gridArea="sidebar"
-//   >
-//     sidebar
-//   </Child>
-//     navbar
-//   </Child>
-//   <Child
-//     style={{
-//       width: "100%",
-//       background: "papayawhip",
-//       color: "black",
-//       padding: "5rem",
-//       gridArea: "body",
-//     }}
-//     gridArea="body"
-//   >
-//     body
-//   </Child>
-//   <Child
-//     style={{
-//       width: "100%",
-//       background: "blue",
-//       color: "white",
-//       padding: "5rem",
-//     }}
-//     gridArea="footer"
-//   >
-//     footer
-//   </Child>

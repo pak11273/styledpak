@@ -1,4 +1,5 @@
 import {
+  FontSizeProps,
   border,
   borderRadius,
   color,
@@ -18,7 +19,9 @@ import {
 
 import styled from "styled-components"
 
-export default styled.span`
+type SpanProps = FontSizeProps
+
+export default styled.span<SpanProps>`
   ${border}
   ${space}
   ${fontSize}

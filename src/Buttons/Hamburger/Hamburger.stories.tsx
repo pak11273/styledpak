@@ -1,4 +1,4 @@
-import Hamburger from "./Hamburger"
+import { Hamburger } from "./Hamburger"
 import React from "react"
 
 export default {

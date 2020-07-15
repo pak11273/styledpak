@@ -1,13 +1,12 @@
 import React, { useState } from "react"
+import { color, layout } from "styled-system"
 
 import { Button } from "../../index"
 import { HamburgerProps } from "./Hamburger.types"
-import { color } from "styled-system"
-import styled from "styled-components"
+import { SystemProps } from "../../../shared/types"
+import styled from "styled-components/"
 
-const Styles = styled(Button)`
-  ${color}
-  position: absolute;
+const Styles = styled(Button)<SystemProps>`
   top: 5%;
   left: 2rem;
   display: flex;
@@ -46,9 +45,11 @@ const Styles = styled(Button)`
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
+  ${color};
+  ${layout};
 `
 
-const Hamburger = (props: any) => {
+export const Hamburger = (props: any) => {
   const [open, setOpen] = useState(false)
   return (
     <Styles {...props} onClick={() => alert("hi")}>
@@ -58,5 +59,3 @@ const Hamburger = (props: any) => {
     </Styles>
   )
 }
-
-export default Hamburger

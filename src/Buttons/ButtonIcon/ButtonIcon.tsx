@@ -1,9 +1,23 @@
+import {
+  LinkProps,
+  NavLinkProps,
+  NavLink as RouterLink,
+} from "react-router-dom"
 import React, { ReactElement, useEffect, useRef } from "react"
 
-import { ButtonProps } from "./Button.types"
+import { ButtonIconProps } from "./ButtonIcon.types"
+import { SystemProps } from "../../../shared/types"
 import styled from "styled-components"
 
-const Style = styled.button<ButtonProps>`
+type AnchorProps = any &
+  SystemProps &
+  ButtonIconProps &
+  Pick<NavLinkProps, "to"> & {
+    onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void
+  }
+
+// const Style = styled.button<ButtonIconProps>`
+const Style = styled(RouterLink)<AnchorProps>`
   background: ${props => props.bg || props.theme.colors.pak.default};
   border: ${props =>
     props.color
@@ -38,16 +52,9 @@ const Style = styled.button<ButtonProps>`
       ? "0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)"
       : "none"};
 `
-/* border-color: ${get("buttons.default.border.hover")};
-    box-shadow: ${get("buttons.default.shadow.hover")}; */
 
-/* box-shadow: ${get("buttons.default.shadow.active")};
-    border-color: ${get("buttons.default.border.active")}; */
-
-/* color: ${get("buttons.default.color.disabled")}; */
-/* border-color: ${get("buttons.default.border.disabled")};  */
-
-const Button: React.FC<ButtonProps> = props => {
+const ButtonIcon: React.FC<ButtonIconProps> = props => {
+  console.log("props: ", props)
   const btn = useRef(null)
   // TODO: when not focused change bg back to default
   const handleFocusOut = (e: MouseEvent) => {
@@ -60,4 +67,4 @@ const Button: React.FC<ButtonProps> = props => {
   return <Style {...props} onClick={props.onClick} ref={btn} />
 }
 
-export default Button
+export default ButtonIcon

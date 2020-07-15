@@ -1,7 +1,9 @@
 import {
+  AlignItemsProps,
   AlignSelfProps,
   BorderRadiusProps,
   ColorProps,
+  DisplayProps,
   FlexboxProps,
   FontSizeProps,
   GridProps,
@@ -20,8 +22,11 @@ import {
 } from "styled-system"
 
 export type SystemProps = AlignSelfProps &
+  AlignItemsProps &
+  AlignSelfProps &
   BorderRadiusProps &
   ColorProps &
+  DisplayProps &
   FlexboxProps &
   FontSizeProps &
   GridProps &

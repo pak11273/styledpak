@@ -5,7 +5,9 @@ interface Ibg {
 }
 
 export interface ThemeColors {
+  default: CSS.ColorProperty
   primary: CSS.ColorProperty
+  secondary: CSS.ColorProperty
   link: CSS.ColorProperty
   success: CSS.ColorProperty
   warning: CSS.ColorProperty
@@ -20,9 +22,9 @@ export interface ThemeColors {
   navy: CSS.ColorProperty
   "near-black": CSS.ColorProperty
   pak: {
-    test?: CSS.ColorProperty
     bg?: {
       default: CSS.ColorProperty
+      active: CSS.ColorProperty
     }
   }
   white: CSS.ColorProperty
@@ -40,12 +42,14 @@ export interface ThemeColors {
 
 export const colors: ThemeColors = {
   pak: {
-    test: "tomato",
     bg: {
-      default: "tomato",
+      default: "#708090",
+      active: "#708090",
     },
   },
+  default: "#708090",
   primary: "#423EA2",
+  secondary: "#1890ff",
   link: "#1890ff",
   success: "#52c41a",
   warning: "#faad14",
