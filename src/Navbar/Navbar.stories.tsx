@@ -23,7 +23,12 @@ storiesOf("Navbar", module)
     return (
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Navbar height={60}>
-          <ButtonIcon bg="pak.bg.default" activeColor="blue" hoverColor="red">
+          <ButtonIcon
+            to="#"
+            bg="pak.bg.default"
+            activeColor="blue"
+            hoverColor="red"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -41,10 +46,10 @@ storiesOf("Navbar", module)
               />
             </svg>
           </ButtonIcon>
-          <Link {...{ bg: "green", display: { _: "none", sm: "flex" } }}>
+          <Link to="#" {...{ bg: "green", display: { _: "none", sm: "flex" } }}>
             item 2
           </Link>
-          <Link {...{ bg: "blue", display: { _: "none", sm: "flex" } }}>
+          <Link to="#" {...{ bg: "blue", display: { _: "none", sm: "flex" } }}>
             item 3
           </Link>
           <Hamburger display={{ _: "flex", sm: "none" }} />

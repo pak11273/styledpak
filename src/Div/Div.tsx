@@ -30,8 +30,6 @@ import styled from "styled-components"
 
 // import { DivProps } from "./Div.types";
 
-
-
 export type StyledSystemProps =
   | SpaceProps
   | FontSizeProps
