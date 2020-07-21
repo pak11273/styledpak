@@ -1,4 +1,5 @@
 export interface ButtonIconProps {
+  activeClassName?: string
   /**
    * background color
    *

@@ -1,3 +1,5 @@
+import "./navbar.css"
+
 import { ButtonIcon, Hamburger, Link } from "../index"
 
 import Navbar from "./Navbar"
@@ -24,6 +26,7 @@ storiesOf("Navbar", module)
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Navbar height={60}>
           <ButtonIcon
+            activeClassName=".active"
             to="#"
             bg="pak.bg.default"
             activeColor="blue"

@@ -1,4 +1,4 @@
-import { LinkProps, Link as RouterLink } from "react-router-dom"
+import { NavLinkProps, NavLink as RouterLink } from "react-router-dom"
 import { color, layout, space, typography, variant } from "styled-system"
 
 import { Div } from "../index"
@@ -10,7 +10,7 @@ import styled from "styled-components"
 type AnchorProps = any &
   SystemProps &
   LinkComponentProps &
-  Pick<LinkProps, "to"> & {
+  Pick<NavLinkProps, "to"> & {
     onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void
   }
 

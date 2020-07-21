@@ -37,7 +37,7 @@ const Style = styled(RouterLink)<AnchorProps>`
     border-color: transparent;
     background: ${props => props.focusColor || "none"};
   }
-  &:active {
+  &.${props => props.activeClassName} {
     background: ${props => props.activeColor || "none"};
   }
   &:disabled {
@@ -60,6 +60,7 @@ const ButtonIcon: React.FC<ButtonIconProps> = props => {
   const handleFocusOut = (e: MouseEvent) => {
     console.log("btn: ", btn)
   }
+
   useEffect(() => {
     addEventListener("mouseleave", handleFocusOut)
     return removeEventListener("mouseleave", () => {})
