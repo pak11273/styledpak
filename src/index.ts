@@ -4,6 +4,7 @@ import Button from "./Buttons/Button/Button"
 import ButtonIcon from "./Buttons/ButtonIcon/ButtonIcon"
 import Div from "./Div/Div"
 import Flex from "./Flex/Flex"
+import Form from "./Form/Form"
 import Grid from "./Grid/Grid"
 import { Hamburger } from "./Buttons/Hamburger/Hamburger"
 import Input from "./Input/Input"
@@ -25,6 +26,7 @@ export {
   ButtonIcon,
   Div,
   Flex,
+  Form,
   Hamburger,
   Label,
   // Link,

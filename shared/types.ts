@@ -2,6 +2,7 @@ import {
   AlignItemsProps,
   AlignSelfProps,
   BorderRadiusProps,
+  ButtonStyleProps,
   ColorProps,
   DisplayProps,
   FlexboxProps,
@@ -24,6 +25,7 @@ import {
 export type SystemProps = AlignSelfProps &
   AlignItemsProps &
   AlignSelfProps &
+  ButtonStyleProps &
   BorderRadiusProps &
   ColorProps &
   DisplayProps &

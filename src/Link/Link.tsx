@@ -41,7 +41,6 @@ const Style = styled(RouterLink)<AnchorProps>(
 Style.defaultProps = {
   alignItems: "center",
   display: "flex",
-  fontSize: "40px",
 }
 
 export const Link: React.FC<AnchorProps> = ({

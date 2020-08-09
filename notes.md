@@ -32,9 +32,12 @@ https://medium.com/storybookjs/declarative-storybook-configuration-49912f77b78
 
 - ref: https://quipper.github.io/2020/04/06/styled-system-in-practice.html
 
-## yalc
+## yalc => AFTER CREATING A NEW COMPONENT OR UPDATING ONE use yalc
 
 1. styled => yalc publish
 2. project => yalc add styled
-3. styled => yalc publish
-4. project => yalc update styled
+
+## Creating a compconent
+
+1. yarn generate <Component Name>
+2. add component to components index.ts

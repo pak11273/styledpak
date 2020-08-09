@@ -7,6 +7,6 @@ import { render } from "@testing-library/react"
 describe("Test Component", () => {
   let props: InputProps
 
-  const renderComponent = () => render(<Input {...props} />)
+  const renderComponent = () => render(<Input />)
   it("should do something here", () => {})
 })

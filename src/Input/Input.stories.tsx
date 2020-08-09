@@ -7,5 +7,3 @@ export default {
 }
 
 export const Label = () => <Input />
-
-export const WithLabel = () => <Input label="foo" />
