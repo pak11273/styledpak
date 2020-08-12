@@ -5,17 +5,6 @@ interface Ibg {
 }
 
 export interface ThemeColors {
-  default: CSS.ColorProperty
-  primary: CSS.ColorProperty
-  secondary: CSS.ColorProperty
-  link: CSS.ColorProperty
-  success: CSS.ColorProperty
-  warning: CSS.ColorProperty
-  error: CSS.ColorProperty
-  heading: CSS.ColorProperty
-  text: CSS.ColorProperty
-  disabled: CSS.ColorProperty
-  border: CSS.ColorProperty
   black: string
   blacks: CSS.ColorProperty[]
   blue: CSS.ColorProperty
@@ -23,7 +12,7 @@ export interface ThemeColors {
   "near-black": CSS.ColorProperty
   pak: {
     bg?: {
-      default: CSS.ColorProperty
+      default?: CSS.ColorProperty
       active: CSS.ColorProperty
     }
   }
@@ -38,26 +27,41 @@ export interface ThemeColors {
   "light-gray": CSS.ColorProperty
   "near-white": CSS.ColorProperty
   transparent: CSS.ColorProperty
+  variants?: {
+    default?: CSS.ColorProperty
+    primary?: CSS.ColorProperty
+    secondary?: CSS.ColorProperty
+    success?: CSS.ColorProperty
+    warning?: CSS.ColorProperty
+    error?: CSS.ColorProperty
+  }
+  link?: CSS.ColorProperty
+  border?: CSS.ColorProperty
+  heading?: CSS.ColorProperty
+  text?: CSS.ColorProperty
+  disabled?: CSS.ColorProperty
 }
 
 export const colors: ThemeColors = {
   pak: {
     bg: {
-      default: "#708090",
+      // default: "#708090",
       active: "#708090",
     },
   },
-  default: "#708090",
-  primary: "#423EA2",
-  secondary: "#1890ff",
+  variants: {
+    default: "#708090",
+    primary: "#423EA2",
+    secondary: "#1890ff",
+    success: "#52c41a",
+    warning: "#faad14",
+    error: "#e84118",
+  },
   link: "#1890ff",
-  success: "#52c41a",
-  warning: "#faad14",
-  error: "#e84118",
+  border: "#423EA2",
   heading: "#423EA2",
   text: "#000",
   disabled: "#f5222d",
-  border: "#423EA2",
   black: "#000e1a",
   white: "#fff",
   blue: "#007ce0",

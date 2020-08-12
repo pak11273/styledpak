@@ -18,7 +18,7 @@ type AnchorProps = any &
 
 // const Style = styled.button<ButtonIconProps>`
 const Style = styled(RouterLink)<AnchorProps>`
-  background: ${props => props.bg || props.theme.colors.pak.default};
+  background: ${props => props.bg || "gray"};
   border: ${props =>
     props.color
       ? `1px solid ${props.color}`

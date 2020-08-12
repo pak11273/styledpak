@@ -12,13 +12,6 @@ storiesOf("Button", module)
       <Button to="#">No Props</Button>
     </div>
   ))
-  .add("with theme primary bg", () => (
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <Button to="#" bg="red" color="primary">
-        Primary
-      </Button>
-    </div>
-  ))
   .add("with icon", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Button
@@ -27,7 +20,6 @@ storiesOf("Button", module)
         padding={text("padding", "6px 16px")}
         margin={text("margin", "0px")}
         shadow={boolean("shadow", true)}
-        case={text("case", "none")}
         onClick={onClick}
       >
         <div>
@@ -54,21 +46,15 @@ storiesOf("Button", module)
   .add("playground", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Button
-        bg={text("bg", "blue")}
-        border={text("border", "1px solid black")}
-        color={color("color", "white", "color")}
-        focusColor={text("focusColor", "red")}
-        activeColor={text("activeColor", "green")}
-        disabledColor={text("disabledColor", "black")}
-        hoverColor={text("hoverColor", "red")}
+        bg={text("bg", null)}
         padding={text("padding", "6px 16px")}
         margin={text("margin", "0px")}
         shadow={boolean("shadow", true)}
-        case={text("case", "none")}
-        disabled={boolean("disabled", false)}
+        // disabled={boolean("disabled", false)}
+        variant={text("variant", null)}
         onClick={onClick}
       >
-        <div>Primary</div>
+        <div>Custom</div>
       </Button>
     </div>
   ))
