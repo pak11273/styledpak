@@ -9,11 +9,45 @@ export default {
 storiesOf("ButtonIcon", module)
   .add("base", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <ButtonIcon>base box</ButtonIcon>
+      <ButtonIcon>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          fill="currentcolor"
+        >
+          <circle
+            r={11}
+            cx={12}
+            cy={12}
+            fill="none"
+            stroke="white"
+            strokeWidth={2}
+          />
+        </svg>
+      </ButtonIcon>
     </div>
   ))
   .add("with props", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <ButtonIcon>ButtonIcon with props</ButtonIcon>
+      <ButtonIcon>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          fill="currentcolor"
+        >
+          <circle
+            r={11}
+            cx={12}
+            cy={12}
+            fill="none"
+            stroke="white"
+            strokeWidth={2}
+          />
+        </svg>
+      </ButtonIcon>
     </div>
   ))

@@ -9,8 +9,6 @@ import {
   variant,
 } from "styled-system"
 
-import { ButtonProps } from "./Button.types"
-import { SystemProps } from "../../../shared/types"
 import { css } from "@styled-system/css"
 import styled from "styled-components"
 
@@ -51,16 +49,7 @@ Style.defaultProps = {
 }
 
 const Button: React.FC<any> = props => {
-  const btn = useRef(null)
-  // TODO: when not focused change bg back to default
-  const handleFocusOut = (e: MouseEvent) => {
-    console.log("btn: ", btn)
-  }
-  useEffect(() => {
-    addEventListener("mouseleave", handleFocusOut)
-    return removeEventListener("mouseleave", () => {})
-  })
-  return <Style {...props} ref={btn} />
+  return <Style {...props} />
 }
 
 export default Button

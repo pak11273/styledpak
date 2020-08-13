@@ -5,7 +5,7 @@ import React from "react"
 import { SystemProps } from "../../shared/types"
 import styled from "styled-components"
 
-const Style = styled(Flex)<SystemProps>(
+const Style = styled<any>(Flex)(
   {
     textDecoration: "none",
     padding: "0em",
@@ -14,19 +14,7 @@ const Style = styled(Flex)<SystemProps>(
   color,
   typography,
   layout,
-  space,
-  variant({
-    variants: {
-      default: {
-        color: "primary",
-        bg: "transparent",
-      },
-      secondary: {
-        color: "white",
-        bg: "secondary",
-      },
-    },
-  })
+  space
 )
 
 Style.defaultProps = {
