@@ -1,13 +1,13 @@
-import { color, grid, layout, space } from "styled-system"
+import { color, compose, grid, layout, space, variant } from "styled-system"
 
-import { SystemProps } from "../../shared/types"
 import styled from "styled-components"
 
-const Box = styled.div<SystemProps>`
-  ${color}
-  ${grid}
-  ${layout}
-  ${space}
-`
+const Box = styled<any>("div")(
+  {
+    boxSizing: "border-box",
+  },
+
+  compose(color, grid, layout, space)
+)
 
 export default Box

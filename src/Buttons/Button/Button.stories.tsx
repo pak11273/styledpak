@@ -9,7 +9,9 @@ const onClick = () => console.log("this is a button")
 storiesOf("Button", module)
   .add("no props", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <Button to="#">No Props</Button>
+      <Button variant="primary" to="#">
+        No Props
+      </Button>
     </div>
   ))
   .add("with icon", () => (
@@ -43,16 +45,35 @@ storiesOf("Button", module)
       </Button>
     </div>
   ))
+  .add("sizes", () => {
+    return (
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+        }}
+      >
+        <Button size="small">small</Button>
+        <Button size="medium">medium</Button>
+        <Button size="large">large</Button>
+        <Button size="xlarge">xlarge</Button>
+        <Button size="xxlarge">xxlarge</Button>
+      </div>
+    )
+  })
   .add("playground", () => (
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Button
         bg={text("bg", null)}
-        padding={text("padding", "6px 16px")}
+        px={text("px", "6")}
+        py={text("py", "4")}
         margin={text("margin", "0px")}
         shadow={boolean("shadow", true)}
         // disabled={boolean("disabled", false)}
-        variant={text("variant", null)}
-        onClick={onClick}
+        variant={text("variant", "primary")}
       >
         <div>Custom</div>
       </Button>

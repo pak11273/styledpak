@@ -1,69 +1,20 @@
-import * as CSS from "csstype"
-
-interface Ibg {
-  default: CSS.ColorProperty
-}
-
-export interface ThemeColors {
-  black: string
-  blacks: CSS.ColorProperty[]
-  blue: CSS.ColorProperty
-  navy: CSS.ColorProperty
-  "near-black": CSS.ColorProperty
-  pak: {
-    bg?: {
-      default?: CSS.ColorProperty
-      active: CSS.ColorProperty
-    }
-  }
-  white: CSS.ColorProperty
-  whites: CSS.ColorProperty[]
-  "dark-gray": CSS.ColorProperty
-  "mid-gray": CSS.ColorProperty
-  gray: CSS.ColorProperty
-  silver: CSS.ColorProperty
-  "light-silver": CSS.ColorProperty
-  "moon-gray": CSS.ColorProperty
-  "light-gray": CSS.ColorProperty
-  "near-white": CSS.ColorProperty
-  transparent: CSS.ColorProperty
-  variants?: {
-    default?: CSS.ColorProperty
-    primary?: CSS.ColorProperty
-    secondary?: CSS.ColorProperty
-    success?: CSS.ColorProperty
-    warning?: CSS.ColorProperty
-    error?: CSS.ColorProperty
-  }
-  link?: CSS.ColorProperty
-  border?: CSS.ColorProperty
-  heading?: CSS.ColorProperty
-  text?: CSS.ColorProperty
-  disabled?: CSS.ColorProperty
-}
-
-export const colors: ThemeColors = {
-  pak: {
-    bg: {
-      // default: "#708090",
-      active: "#708090",
-    },
-  },
-  variants: {
-    default: "#708090",
-    primary: "#423EA2",
-    secondary: "#1890ff",
-    success: "#52c41a",
-    warning: "#faad14",
-    error: "#e84118",
-  },
+export const colors = {
+  background: "#f7f7f7",
+  default: "#708090",
+  primary: "#423EA2",
+  secondary: "#1890ff",
+  success: "#52c41a",
+  warning: "#faad14",
+  error: "#e84118",
+  highlight: "#fffff",
+  accent: "ffffff",
   link: "#1890ff",
   border: "#423EA2",
   heading: "#423EA2",
-  text: "#000",
+  text: "#3d3d3d",
   disabled: "#f5222d",
   black: "#000e1a",
-  white: "#fff",
+  white: "#f3f3f3",
   blue: "#007ce0",
   navy: "#004175",
   "near-black": "#111",

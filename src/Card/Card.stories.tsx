@@ -5,4 +5,4 @@ export default {
   title: "Card",
 }
 
-export const BaseCard = () => <Card fontSize={96}>Base Card</Card>
+export const BaseCard = () => <Card>Base Card</Card>
