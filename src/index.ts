@@ -1,4 +1,5 @@
 import AutoComplete from "./AutoComplete/AutoComplete"
+import Avatar from "./Buttons/Avatar/Avatar"
 import Box from "./Box/Box"
 import Button from "./Buttons/Button/Button"
 import ButtonIcon from "./Buttons/ButtonIcon/ButtonIcon"
@@ -20,6 +21,7 @@ export * from "./Link/Link"
 export * from "./Text/Text"
 
 export {
+  Avatar,
   AutoComplete,
   Box,
   Button,

@@ -154,4 +154,23 @@ export const theme = {
       borderRadius: baseTheme.radii[3],
     },
   },
+  avatarSizes: {
+    small: {
+      fontSize: baseTheme.fontSizes[1],
+    },
+    medium: {
+      fontSize: baseTheme.fontSizes[3],
+      height: "30px",
+      width: "30px",
+    },
+    large: {
+      fontSize: baseTheme.fontSizes[5],
+    },
+    xlarge: {
+      fontSize: baseTheme.fontSizes[6],
+    },
+    xxlarge: {
+      fontSize: baseTheme.fontSizes[7],
+    },
+  },
 }
