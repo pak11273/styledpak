@@ -37,7 +37,7 @@ storiesOf("Button", module)
               cx={12}
               cy={12}
               fill="none"
-              stroke="currentcolor"
+              stroke="white"
               strokeWidth={2}
             />
           </svg>
@@ -68,14 +68,12 @@ storiesOf("Button", module)
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Button
         bg={text("bg", null)}
-        px={text("px", "6")}
-        py={text("py", "4")}
         margin={text("margin", "0px")}
         shadow={boolean("shadow", true)}
-        // disabled={boolean("disabled", false)}
+        disabled={boolean("disabled", false)}
         variant={text("variant", "primary")}
       >
-        <div>Custom</div>
+        Custom
       </Button>
     </div>
   ))
