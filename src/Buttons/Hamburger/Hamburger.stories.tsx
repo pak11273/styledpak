@@ -18,7 +18,7 @@ export const Base = () => {
         position: "relative",
       }}
     >
-      <Hamburger bg="blue" />
+      <Hamburger bg="blue" size="small" variant="secondary" />
     </div>
   )
 }
