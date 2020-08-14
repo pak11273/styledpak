@@ -4,7 +4,6 @@ import Box from "./Box/Box"
 import Button from "./Buttons/Button/Button"
 import ButtonIcon from "./Buttons/ButtonIcon/ButtonIcon"
 import Div from "./Div/Div"
-import Dropdown from "./Dropdown/Dropdown"
 import Flex from "./Flex/Flex"
 import Form from "./Form/Form"
 import Grid from "./Grid/Grid"
@@ -28,7 +27,6 @@ export {
   Button,
   ButtonIcon,
   Div,
-  Dropdown,
   Flex,
   Form,
   Hamburger,

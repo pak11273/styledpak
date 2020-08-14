@@ -31,8 +31,6 @@ setDefaults({
 const req = require.context("../src", true, /.stories.tsx$/)
 
 function loadStories() {
-  // TODO
-  // require("./Styleguide/Styleguide.stories")
   req.keys().forEach(file => req(file))
 }
 
